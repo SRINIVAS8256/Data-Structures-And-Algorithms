@@ -2,7 +2,7 @@ def main():
     test=2
 
     for test in range(0,test,1):
-        p16()
+        p19()
         print(" ")
 
 
@@ -260,7 +260,54 @@ def p16():
             # A B
             # A
 
+def p17():
+    n = int(input("n = "))
+    for i in range(n):
+        for j in range(i+1):
+            print(chr(ord('A') + i), end=" ")
+        print(" ")
+        # A
+        # B B
+        # C C C
+        # D D D D
 
+def p18():
+    n=int(input("n = "))
+    for i in range(n):
+        #space
+        for j in range(n-1-i):
+            print(" ",end=" ")
+
+        for j in range((2*i)+1):
+            print(chr(ord('A') + j),end=" ")
+        print(" ")
+
+
+        #       A
+        #     A B C
+        #   A B C D E
+        # A B C D E F G
+
+
+def p19():
+    n = int(input("n = "))
+
+    for i in range(n):
+        # spaces
+        for j in range(n - i - 1):
+            print(" ", end=" ")
+
+        # increasing characters
+        char = 'A'
+        for j in range(2 * i + 1):
+            print(char, end=" ")
+
+            if j < i:
+                char = chr(ord(char) + 1)
+            else:
+                char = chr(ord(char) - 1)
+
+        print()
 
 
 
